@@ -14,9 +14,11 @@ type Config struct {
 
 	Local bool `env:"LOCAL" envDefault:"false"`
 
+	RandomErrorRate float64 `env:"RANDOM_ERROR_RATE" envDefault:"0.1"`
+
 	TracingEnabled    bool    `env:"TRACING_ENABLED" envDefault:"false"`
 	TracingSampleRate float64 `env:"TRACING_SAMPLERATE" envDefault:"0.01"`
-	TracingService    string  `env:"TRACING_SERVICE" envDefault:"katalog-agent"`
+	TracingService    string  `env:"TRACING_SERVICE" envDefault:"random-server"`
 	TracingVersion    string  `env:"TRACING_VERSION"`
 }
 
